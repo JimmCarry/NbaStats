@@ -1,9 +1,14 @@
 <template>
-    <div>
-        <ul class="teams-table">
-            <li v-for="team in teams">
+    <div class="container">
+        <div class="view-changer">
+            <ul>
+                <li>All</li>
+            </ul>
+        </div>
+        <ul class="table">
+            <li v-for="team in teams" class="team">
                 <img :src="`../../public/logos/${team.Key}.svg`" alt="">
-                <a href="#">{{ team.Key }}</a>
+                <h1>{{ team.Key }}</h1>
             </li>
         </ul>
     </div>
@@ -78,7 +83,7 @@ img {
     width: 100px;
     height: 100px;
 }
-.teams-table {
+.table {
     display: flex;
     flex-wrap: wrap;
 }
@@ -87,5 +92,8 @@ ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.team {
+    
 }
 </style>
